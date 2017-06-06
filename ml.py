@@ -42,11 +42,13 @@ train_survived = survived[0:700]
 test_datapoints = datapoints[700:]
 test_survived = survived[700:]
 
-from sklearn import tree
-from sklearn.linear_model import LogisticRegression
+#from sklearn import tree
+#from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 #from sklearn.neighbors import KNeighborsClassifier
 #mymodel = KNeighborsClassifier(n_neighbors=3, weights='distance')
-mymodel = LogisticRegression()
+#mymodel = LogisticRegression()
+mymodel = RandomForestClassifier()
 
 mymodel.fit(train_datapoints, train_survived)
 
